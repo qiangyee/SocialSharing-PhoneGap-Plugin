@@ -1,4 +1,3 @@
-cordova.define("nl.x-services.plugins.socialsharing.SocialSharing", function(require, exports, module) { 
 var exec    = require('cordova/exec');
 var cordova = require('cordova')
 
@@ -89,5 +88,4 @@ var socialsharing = new SocialSharing();
 
 module.exports = socialsharing
 
-});
 
