@@ -1,3 +1,7 @@
+cordova.define("nl.x-services.plugins.socialsharing.SocialSharing", function(require, exports, module) { 
+var exec    = require('cordova/exec');
+var cordova = require('cordova')
+
 function SocialSharing() {
 }
 
@@ -79,13 +83,11 @@ SocialSharing.prototype._getErrorCallback = function (ecb, functionName) {
   }
 };
 
-SocialSharing.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
+var socialsharing = new SocialSharing();
 
-  window.plugins.socialsharing = new SocialSharing();
-  return window.plugins.socialsharing;
-};
+//socialsharing.shareViaTwitter('Hello world', null, 'http://example.com',function(){console.log(arguments)}, function(){console.log(arguments)});
 
-cordova.addConstructor(SocialSharing.install);
+module.exports = socialsharing
+
+});
+
